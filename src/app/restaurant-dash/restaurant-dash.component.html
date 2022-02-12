@@ -1,1 +1,95 @@
-<p>restaurant-dash works!</p>
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+        <h2>Restaurant Record App</h2>
+        <div class="d-flex">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Add Restaurant
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Jumbotron for looks (From BootStrap) -->
+<div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">Restaurant Records Management</h1>
+        <p class="col-md-8 fs-4">You can save records of restaurant using angular</p>
+        <a class="btn btn-primary btn-lg" type="button" target="_blank" href="https://www.roshangyawali9.com.np/">G9</a>
+    </div>
+</div>
+
+<!-- Table Display Here -->
+<table class="table mt-4">
+    <thead>
+        <tr>
+            <th scope="'col">Restaurant ID</th>
+            <th scope="'col">Name</th>
+            <th scope="'col">Email</th>
+            <th scope="'col">Mobile</th>
+            <th scope="'col">Address</th>
+            <th scope="'col">Services</th>
+            <th scope="'col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>G9</td>
+            <td>g9@gmail.com</td>
+            <td>9876543210</td>
+            <td>Location</td>
+            <td>Tea & Coffee</td>
+            <td>
+                <button class="btn btn-info">Edit</button>&nbsp;
+                <button class="btn btn-danger">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- using modal (From BootStrap) -->
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Form inside modal body (From BootStrap) -->
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Name</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Name"
+                            aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Email Id</label>
+                        <input type="email" class="form-control" placeholder="Email" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Mobile</label>
+                        <input type="number" class="form-control" id="exampleInputEmail1" placeholder="Mobile"
+                            aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Address</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Address"
+                            aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Restaurant Services like tea, coffee</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Services"
+                            aria-describedby="emailHelp">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Add Details</button>
+            </div>
+        </div>
+    </div>
+</div>
