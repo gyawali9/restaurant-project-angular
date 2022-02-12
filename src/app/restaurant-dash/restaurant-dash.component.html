@@ -59,30 +59,31 @@
             </div>
             <div class="modal-body">
                 <!-- Form inside modal body (From BootStrap) -->
-                <form>
+                <form [formGroup]="formValue">
                     <div class="mb-3">
                         <label class="form-label">Name</label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Name"
-                            aria-describedby="emailHelp">
+                        <input type="text" formControlName="name" class="form-control" id="exampleInputEmail1"
+                            placeholder="Name" aria-describedby="emailHelp">
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Email Id</label>
-                        <input type="email" class="form-control" placeholder="Email" id="exampleInputPassword1">
+                        <input type="email" formControlName="email" class="form-control" placeholder="Email"
+                            id="exampleInputPassword1">
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Mobile</label>
-                        <input type="number" class="form-control" id="exampleInputEmail1" placeholder="Mobile"
-                            aria-describedby="emailHelp">
+                        <input type="number" formControlName="mobile" class="form-control" id="exampleInputEmail1"
+                            placeholder="Mobile" aria-describedby="emailHelp">
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Address</label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Address"
-                            aria-describedby="emailHelp">
+                        <input type="text" formControlName="address" class="form-control" id="exampleInputEmail1"
+                            placeholder="Address" aria-describedby="emailHelp">
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Restaurant Services like tea, coffee</label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Services"
-                            aria-describedby="emailHelp">
+                        <input type="text" formControlName="services" class="form-control" id="exampleInputEmail1"
+                            placeholder="Services" aria-describedby="emailHelp">
                     </div>
                 </form>
             </div>
