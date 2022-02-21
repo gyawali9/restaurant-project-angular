@@ -42,7 +42,7 @@ export class RestaurantDashComponent implements OnInit {
       let ref = document.getElementById('clear');
       ref?.click();
       this.formValue.reset();
-      this.getAllData();
+      this.getAllData(); // when we post any data
     },
     err=>{
       alert('Error in adding restaurant records');
@@ -57,5 +57,12 @@ export class RestaurantDashComponent implements OnInit {
     })
   }
 
-
+  // Delete restaurant data
+  deleteResto(data:any){
+    this.api.deleteRestaurant(data.id).subscribe(res=>{
+      alert('Restaurant Record Deleted');
+      this.getAllData(); //Quick refresh data on deletion
+    })
+    }
 }
+

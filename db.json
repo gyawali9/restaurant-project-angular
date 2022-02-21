@@ -1,27 +1,6 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    },
-    {
-      "id": 2,
-      "name": "ram",
-      "email": "ram@gmail.com",
-      "mobile": 123456789,
-      "address": "ktm",
-      "services": "tea"
-    },
-    {
-      "id": 3,
-      "name": "dfd",
-      "email": "wsdf",
-      "mobile": 122,
-      "address": "sss",
-      "services": "dd"
-    },
-    {
       "id": 4,
       "name": "aaaa",
       "email": "aaaa",
@@ -30,13 +9,7 @@
       "services": "aaaa"
     }
   ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
+  "comments": [],
   "profile": {
     "name": "typicode"
   }
