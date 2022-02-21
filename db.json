@@ -1,19 +1,35 @@
 {
-    "posts": [
-        {
-            "id": 1,
-            "title": "json-server",
-            "author": "typicode"
-        }
-    ],
-    "comments": [
-        {
-            "id": 1,
-            "body": "some comment",
-            "postId": 1
-        }
-    ],
-    "profile": {
-        "name": "typicode"
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "name": "ram",
+      "email": "ram@gmail.com",
+      "mobile": 123456789,
+      "address": "ktm",
+      "services": "tea"
+    },
+    {
+      "id": 3,
+      "name": "dfd",
+      "email": "wsdf",
+      "mobile": 122,
+      "address": "sss",
+      "services": "dd"
     }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
 }

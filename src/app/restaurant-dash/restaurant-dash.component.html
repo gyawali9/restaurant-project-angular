@@ -34,13 +34,12 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>1</td>
-            <td>G9</td>
-            <td>g9@gmail.com</td>
-            <td>9876543210</td>
-            <td>Location</td>
-            <td>Tea & Coffee</td>
+        <tr *ngFor="let data of allRestaurantData">
+            <td>{{data.id}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.mobile}}</td>
+            <td>{{data.address}}</td>
+            <td>{{data.services}}</td>
             <td>
                 <button class="btn btn-info">Edit</button>&nbsp;
                 <button class="btn btn-danger">Delete</button>
@@ -90,7 +89,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Add Details</button>
+                <button type="button" class="btn btn-primary" (click)="addResto()">Add Details</button>
             </div>
         </div>
     </div>
