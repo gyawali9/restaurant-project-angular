@@ -42,6 +42,7 @@ export class RestaurantDashComponent implements OnInit {
       let ref = document.getElementById('clear');
       ref?.click();
       this.formValue.reset();
+      this.getAllData();
     },
     err=>{
       alert('Error in adding restaurant records');
