@@ -12,6 +12,9 @@ export class RestaurantDashComponent implements OnInit {
   formValue!: FormGroup;
   restaurantModelObj: RestaurantData = new RestaurantData;
   allRestaurantData:any;
+  showAdd!:boolean;
+  showBtn!:boolean;
+
 
   constructor(private formBuilder: FormBuilder, private api:ApiService) { }
 
@@ -25,6 +28,12 @@ export class RestaurantDashComponent implements OnInit {
     })
     this.getAllData();
   }  
+
+  clickAddResto(){
+    this.formValue.reset();
+    this.showAdd = true;
+    this.showBtn = false;
+  }
 
   // Subscribing our data which is mapped through services
   addResto(){
@@ -63,6 +72,40 @@ export class RestaurantDashComponent implements OnInit {
       alert('Restaurant Record Deleted');
       this.getAllData(); //Quick refresh data on deletion
     })
+    }
+
+    // Edit Items
+    onEditResto(data:any){
+      this.showAdd = false;
+      this.showBtn = true;
+
+      this.restaurantModelObj.id =data.id;
+
+      this.formValue.controls['name'].setValue(data.name);
+      this.formValue.controls['email'].setValue(data.email);
+      this.formValue.controls['mobile'].setValue(data.mobile);
+      this.formValue.controls['address'].setValue(data.address);
+      this.formValue.controls['services'].setValue(data.services);
+
+    }
+
+    updateResto(){
+      this.restaurantModelObj.name = this.formValue.value.name;
+    this.restaurantModelObj.email = this.formValue.value.email;
+    this.restaurantModelObj.mobile = this.formValue.value.mobile;
+    this.restaurantModelObj.address = this.formValue.value.address;
+    this.restaurantModelObj.services = this.formValue.value.services;
+
+    this.api.updateRestaurant(this.restaurantModelObj, this.restaurantModelObj.id).subscribe(res=>{
+      alert('Restaurant Records Updated')
+
+      let ref = document.getElementById('clear');
+      ref?.click();
+      this.formValue.reset();
+      this.getAllData(); // when we post any data
+
+    })
+
     }
 }
 

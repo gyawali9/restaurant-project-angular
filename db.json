@@ -1,12 +1,28 @@
 {
   "posts": [
     {
-      "id": 4,
-      "name": "aaaa",
-      "email": "aaaa",
-      "mobile": 1111,
-      "address": "aaaa",
-      "services": "aaaa"
+      "id": 5,
+      "name": "hotel and bar",
+      "email": "h@gmail.com",
+      "mobile": 123,
+      "address": "brt",
+      "services": "coffee"
+    },
+    {
+      "id": 6,
+      "name": "simple hotel",
+      "email": "f@gmail.com",
+      "mobile": 123,
+      "address": "brt",
+      "services": "tea"
+    },
+    {
+      "id": 7,
+      "name": "bbb",
+      "email": "a@gmail.com",
+      "mobile": 122,
+      "address": "aaa",
+      "services": "aaaaaa"
     }
   ],
   "comments": [],
